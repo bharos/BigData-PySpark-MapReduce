@@ -51,7 +51,7 @@ class MyMapReduce:  # [TODO]
                 namenode_m2r.append((self.partitionFunction(k), (k, v)))
 
     def getHash(self,val):
-
+        #Get the sum of ASCII values as hashCode
         return np.sum([ord(x) for x in val])
 
     def partitionFunction(self, k):  # [TODO]
